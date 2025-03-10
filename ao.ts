@@ -706,7 +706,7 @@ export default class AnimeOnegai implements ServiceClass {
 
               if (this.cfg.bin.shaka) {
                 commandBase = ` --enable_raw_key_decryption ${encryptionKeys.map(kb => '--keys key_id='+kb.kid+':key='+kb.key).join(' ')}`;
-                commandVideo = `input="${tempTsFile}.video.enc.m4s",stream=video,output="${tempTsFile}.video.m4s"`+commandBase;
+                commandVideo = `input="${tempTsFile}.video.enc.mp4",stream=video,output="${tempTsFile}.video.mp4"`+commandBase;
                 commandAudio = `input="${tempTsFile}.audio.enc.m4s",stream=audio,output="${tempTsFile}.audio.m4s"`+commandBase;
               }
 
